@@ -1,6 +1,7 @@
 import useDisney from "../hooks/useDisney";
 import CharacterFavs from "./CharacterFavs";
 import Dropdown from "./Dropdown";
+import Layout from "./Layout";
 
 export default function CharacterSingle({ result }) {
   const addToFavoritos = useDisney().addToFavoritos;
@@ -11,6 +12,7 @@ export default function CharacterSingle({ result }) {
   }
 
   return (
+    <Layout title={result.name}>
     <div className=" flex flex-col justify-center items-center mx-5">
       <div className="w-full flex flex-col md:flex-row p-5 mt-5 rounded-2xl md:max-w-3xl bg-gradient-to-t from-sky-700 to-sky-900 drop-shadow-lg overflow-hidden">
         <div className="md:w-[400px] md:flex-col">
@@ -19,7 +21,7 @@ export default function CharacterSingle({ result }) {
               src={result.imageUrl}
               width="200px"
               height="85px"
-              className="rounded-xl object-cover h-64 object-center w-full"
+              className="rounded-xl object-cover h-64 object-top md:object-scale w-full"
             />
           </div>
           <div className="w-full pt-3 flex justify-center">
@@ -83,5 +85,6 @@ export default function CharacterSingle({ result }) {
         </div>
       </div>
     </div>
+    </Layout>
   );
 }
