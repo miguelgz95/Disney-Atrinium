@@ -30,11 +30,11 @@ const Character = () => {
 
     
     return (
-        <div>
-            <Link href={"/characters"}>Volver atrás</Link>
-            <CharacterSingle result={result}></CharacterSingle>
-
-        </div>
+        <div className='bg-disney min-h-screen w-full'>
+            
+        <CharacterSingle result={result}></CharacterSingle>
+        <Link href={"/characters"}>Volver atrás</Link>
+    </div>
     );
 };
 
