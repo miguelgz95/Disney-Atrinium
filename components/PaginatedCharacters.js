@@ -19,15 +19,23 @@ function PaginatedCharacters() {
 
   if (error)
     return (
-      <h1 className="max-h-min bg-disney">
-        Ups... Parece que algo no fue bien :(
+      <div className="w-full flex flex-col justify-center items-center pt-20 md:pt-24">
+        <img src="/burro.png"  width="50px"/>
+      <h1 className="text-2xl md:text-3xl text-white font-semibold">
+        ¡Ups! Parece que algo no fue bien...
       </h1>
+      </div>
     );
 
-  if (!result) return <h1>Cargando...</h1>;
+  if (!result) return (
+    <div className="w-full flex flex-col justify-center items-center pt-20 md:pt-24">
+      <img src="/campanilla.png" width="100px"/>
+  <h1 className="text-2xl md:text-3xl text-white tracking-wide font-semibold">Cargando magia...</h1>
+  </div>
+  );
 
   return (
-    <div className="w-full flex flex-col justify-center ">
+    <div className="w-full flex flex-col justify-center pt-2">
       <div className=" flex flex-col md:flex-row flex-wrap justify-center">
         {result.data.map((character) => (
           <CharacterCard
@@ -39,13 +47,13 @@ function PaginatedCharacters() {
 
       <div className="w-full flex justify-center space-x-2 pb-5 pt-4">
         <button
-          className="bg-sky-900 text-white px-8 py-2 rounded-full hover:opacity-50 transition ease-in-out"
+          className="bg-sky-800 text-white px-8 py-2 rounded-full hover:opacity-50 transition ease-in-out"
           onClick={prevPage}
         >
           Anterior
         </button>
         <button
-          className="bg-sky-900 text-white px-8 py-2 rounded-full hover:opacity-50 transition ease-in-out"
+          className="bg-sky-800 text-white px-8 py-2 rounded-full hover:opacity-50 transition ease-in-out"
           onClick={nextPage}
         >
           Siguiente

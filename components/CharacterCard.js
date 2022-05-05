@@ -3,9 +3,11 @@ import Link from "next/link";
 import favorites from "../pages/favorites";
 
 export default function CharacterCard({ character }) {
-  const favoritos = useDisney().getFavoritos();
-  const isFavorited =
-    favoritos.filter((e) => e._id == character._id).length > 0;
+  const favorites = useDisney().getFavoritos();
+  const isFavorited = favorites.filter((e) => e._id == character._id).length > 0;
+
+  const viewed = useDisney().getHistorial();
+  const isViewed = viewed.filter((e) => e._id == character._id).length > 0;
 
   return (
     <Link href={`/character/${character._id}`}>
@@ -14,10 +16,13 @@ export default function CharacterCard({ character }) {
         key={character._id}
       >
         <div className="flex-col">
-          <p className="text-2xl text-white">{character.name}</p>
-          <div className="w-full flex">
+          <h2 className="text-2xl text-white">{character.name}</h2>
+          <div className="w-full flex pl-1 space-x-2">
+            {isViewed && (
+              <img src="/ojo.png" width="28px" className="invert" />
+            )}
             {isFavorited && (
-              <img src="like (1).png" width="28px" className="invert" />
+              <img src="like (1).png" width="27px" className="invert" />
             )}
           </div>
         </div>

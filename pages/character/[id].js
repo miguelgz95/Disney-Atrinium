@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 
 import useFetchDisney from "../../hooks/useDisney";
-import Link from "next/link";
+
 import { useEffect } from "react";
 import useDisney from "../../hooks/useDisney";
 import CharacterSingle from "../../components/CharacterSingle";
@@ -21,7 +21,12 @@ const Character = () => {
   }, [result]);
 
   if (!result) {
-    return <p> Cargando... </p>;
+    return (
+      <div className="bg-disney w-full min-h-screen flex flex-col items-center pt-20 md:pt-24">
+      <img src="/campanilla.png" width="100px"/>
+  <h1 className="text-2xl md:text-3xl text-white tracking-wide font-semibold">Cargando magia...</h1>
+  </div>
+    );
   }
 
   return (
@@ -29,9 +34,7 @@ const Character = () => {
       <div className="flex-col justify-center">
         <CharacterSingle result={result}></CharacterSingle>
 
-        <button className="bg-sky-600 text-white mt-4 px-9 py-2 rounded-xl hover:opacity-50 transition ease-in-out drop-shadow-md">
-          <Link href={"/characters"}>Volver atrás</Link>
-        </button>
+        
       </div>
     </div>
   );
