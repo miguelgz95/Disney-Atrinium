@@ -23,9 +23,11 @@ const Character = () => {
   if (!result) {
     return (
       <div className="bg-disney w-full min-h-screen flex flex-col items-center pt-20 md:pt-24">
-      <img src="/campanilla.png" width="100px"/>
-  <h1 className="text-2xl md:text-3xl text-white tracking-wide font-semibold">Cargando magia...</h1>
-  </div>
+        <img src="/images/campanilla.png" width="100px" />
+        <h1 className="text-2xl md:text-3xl text-white tracking-wide font-semibold">
+          Cargando magia...
+        </h1>
+      </div>
     );
   }
 
@@ -33,8 +35,6 @@ const Character = () => {
     <div className="bg-disney min-h-screen w-full">
       <div className="flex-col justify-center">
         <CharacterSingle result={result}></CharacterSingle>
-
-        
       </div>
     </div>
   );

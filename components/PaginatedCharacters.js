@@ -21,10 +21,10 @@ function PaginatedCharacters() {
   if (error)
     return (
       <div className="w-full flex flex-col justify-center items-center pt-20 md:pt-24">
-        <img src="/burro.png"  width="50px"/>
-      <h1 className="text-2xl md:text-3xl text-white font-semibold">
-        ¡Ups! Parece que algo no fue bien...
-      </h1>
+        <img src="/burro.png" width="50px" />
+        <h1 className="text-2xl md:text-3xl text-white font-semibold">
+          ¡Ups! Parece que algo no fue bien...
+        </h1>
       </div>
     );
 

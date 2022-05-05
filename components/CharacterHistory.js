@@ -1,15 +1,19 @@
 import useDisney from "../hooks/useDisney";
 
-export default function CharacterHistory(){
+export default function CharacterHistory() {
   const historial = useDisney().getHistorial();
-  
-  return(
+
+  return (
     <>
-    {historial.length > 0 && <>
-        <h1>Historial</h1>
-        {historial.map((el) => <div key={el._id}>{el.name}</div>)}
-        <hr></hr>
-      </>}
+      {historial.length > 0 && (
+        <>
+          <h1>Historial</h1>
+          {historial.map((el) => (
+            <div key={el._id}>{el.name}</div>
+          ))}
+          <hr></hr>
+        </>
+      )}
     </>
-  )
+  );
 }
