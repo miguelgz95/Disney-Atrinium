@@ -16,15 +16,25 @@ export default function CharacterCard({ character }) {
         key={character._id}
       >
         <div className="flex-col">
-          <h2 className="text-2xl text-white">{character.name}</h2>
-          <div className="w-full flex pl-1 space-x-2">
+          
+          <h2 className="text-xl text-white tracking-wide">{character.name}</h2>
+          <div className="pt-2 flex space-x-3">
+            {character.films.length > 0 && <img src="/clapperboard.png" width="20" className="invert"/>}
+            {character.tvShows.length > 0 && <img src="/television.png" width="20" className="invert"/>}
+            {character.videoGames.length > 0 && <img src="/games.png" width="20" className="invert"/>}
+            {character.parkAttractions.length > 0 && <img src="/roller-coaster.png" width="20" className="invert"/>}
+            {character.allies.length > 0 && <img src="/hand-shake.png" width="20" className="invert"/>}
+            {character.enemies.length > 0 && <img src="/ghost.png" width="20" className="invert"/>}
+          </div>
+          <div className="w-full flex pt-2 space-x-2">
             {isViewed && (
-              <img src="/ojo.png" width="28px" className="invert" />
+              <img src="/ojo.png" width="30px" className="invert" />
             )}
             {isFavorited && (
-              <img src="like (1).png" width="27px" className="invert" />
+              <img src="like (1).png" width="28px" className="invert" />
             )}
           </div>
+          
         </div>
         <img
           src={character.imageUrl}

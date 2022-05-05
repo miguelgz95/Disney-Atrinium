@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import CharacterCard from "./CharacterCard";
 import Layout from "./Layout";
+import Loading from "./Loading";
 
 function PaginatedCharacters() {
   const [page, setPage] = useState(1);
@@ -27,12 +28,7 @@ function PaginatedCharacters() {
       </div>
     );
 
-  if (!result) return (
-    <div className="w-full flex flex-col justify-center items-center pt-20 md:pt-24">
-      <img src="/campanilla.png" width="100px"/>
-  <h1 className="text-2xl md:text-3xl text-white tracking-wide font-semibold">Cargando magia...</h1>
-  </div>
-  );
+  if (!result) return <Loading></Loading>;
 
   return (
     <div className="w-full flex flex-col justify-center pt-2">

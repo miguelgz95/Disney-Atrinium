@@ -41,7 +41,7 @@ export default function Home() {
             className="img w-12 h-12 mb-16 md:mb-0 md:w-40 md:h-40 justify-center self-center"
           />
           <img
-            src="/dark (1).png"
+            src="/dark.png"
             className="img w-20 h-20 md:w-32 md:h-32 ml-4 md:ml-32"
           />
           <img src="/rex3.png" className="img w-16 mr-1 md:mr-0 md:ml-16 md:w-20 ml-5 pt-1" />
