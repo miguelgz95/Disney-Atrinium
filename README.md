@@ -13,7 +13,9 @@ _Get a clone from the repository: git@github.com:miguelgz95/Disney-Atrinium.git_
 
 _In local, access the project and type in the terminal: npm install_
 
-_Finally, to start the application: npm run dev_
+_To start the application: npm run dev_
+
+_Finally, go to the browser and access the application: http://localhost:3000/_
 
 
 ## Technologies 🔧
