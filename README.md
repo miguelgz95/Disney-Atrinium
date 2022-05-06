@@ -1,7 +1,6 @@
 # Disney by Atrinium
 
-![Disney atrinium logo-1](https://user-images.githubusercontent.com/90695378/167033009-fa2a1074-43bb-4bb5-8122-5dbbc4091c8a.png)
-
+![image (1)](https://user-images.githubusercontent.com/90695378/167125958-f50f6689-e4de-4aec-bcf2-0329ef9f607f.png)
 
 ## Description 📋
 
