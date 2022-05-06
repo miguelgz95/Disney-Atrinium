@@ -11,7 +11,7 @@ _Front-end project using Disney API. You can visualize, view the detail of each 
 
 _Get a clone from the repository: git@github.com:miguelgz95/Disney-Atrinium.git_
 
-_In local, access the project and type in the terminal: npm install react-router-dom_
+_In local, access the project and type in the terminal: npm install_
 
 _Finally, to start the application: npm run dev_
 
