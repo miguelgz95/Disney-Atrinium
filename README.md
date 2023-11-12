@@ -15,8 +15,11 @@ _In local, access the project and type in the terminal: npm install_
 
 _To start the application: npm run dev_
 
-_Finally, go to the browser and access the application: http://localhost:3000/_
+_Go to the browser and access the application: http://localhost:3000/_
 
+_Finally, enter the following credentials to log in_
+Username: A-SAFE DIGITAL
+Password: password
 
 ## Technologies 🔧
 
